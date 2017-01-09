@@ -2,6 +2,9 @@ package driver;
 
 import java.util.ArrayList;
 import models.Instructie;
+import models.Knaller;
+import static models.Product.EURO;
+import models.Vuurpijl;
 import models.Vuurwerk;
 
 public class HappyNewYearDriver {
@@ -15,25 +18,12 @@ public class HappyNewYearDriver {
         System.out.println("Happy new year from: Burak, IS109, 500740123");
 
         stap1(pakket);
-
-
-/* TODO stap 2: haal commentaar weg
         stap2(pakket);
-einde TODO stap 2 */
-
-/* TODO stap 3: haal commentaar weg
         stap3(pakket);
-einde TODO stap 3 */
-
-/* TODO stap 4: haal commentaar weg
         stap4(pakket);
-einde TODO stap 4 */
-        
-/* TODO stap 5: haal commentaar weg
         stap5(pakket);
-einde TODO stap 5 */
-        
-/* TODO stap 6: haal commentaar weg
+
+        /* TODO stap 6: haal commentaar weg
         stap6(pakket);
 einde TODO stap61 */
     }
@@ -58,7 +48,6 @@ einde TODO stap61 */
         System.out.println(vuurwerk);
     }
 
-/* TODO stap 2: haal commentaar weg
     private static void stap2(ArrayList<Vuurwerk> pakket) {
         System.out.println("\n--- STAP 2 ---");
 
@@ -87,9 +76,7 @@ einde TODO stap61 */
         pakket.add(knaller);
         System.out.println(knaller);
     }
-einde TODO stap 2 */
 
-/* TODO stap 3: haal commentaar weg
     private static void stap3(ArrayList<Vuurwerk> pakket) {
         System.out.println("\n--- STAP 3 ---");
 
@@ -118,28 +105,43 @@ einde TODO stap 2 */
         pakket.add(vuurpijl);
         System.out.println(vuurpijl);
     }
-einde TODO stap 3 */
 
-/* TODO stap 4: haal commentaar weg
     public static void stap4(ArrayList<Vuurwerk> pakket) {
         System.out.println("\n--- STAP 4 ---");
-
         toonVuurwerk(pakket);
     }
-einde TODO stap 4 */
 
-/* TODO stap 5: haal commentaar weg
+    private static void toonVuurwerk(ArrayList<Vuurwerk> pakket) {
+        double totaalPrijs = 0;
+        for (Vuurwerk i : pakket) {
+            totaalPrijs += i.getPrijs();
+            System.out.println(i.toString());
+        }
+        System.out.println("\n  Kosten vuurwerkpakket: " + EURO + totaalPrijs);
+    }
+
+    private static void toonInstructies(ArrayList<Vuurwerk> pakket, int index) {
+        if ((index >= 0) && (index < pakket.size())) {
+            if (pakket.get(index).getInstructie() != null) {
+                System.out.println(pakket.get(index).getInstructie());
+            } else {
+                System.out.println("Instructie ontbreekt.");
+            }
+
+        } else {
+            System.out.println("Index valt buiten grenzen.");
+        }
+    }
+
     public static void stap5(ArrayList<Vuurwerk> pakket) {
         System.out.println("\n--- STAP 5 ---");
-
         toonInstructies(pakket, -1);
         toonInstructies(pakket, 3);
         toonInstructies(pakket, 10);
         toonInstructies(pakket, 11);
     }
-einde TODO stap 5 */
 
-/* TODO stap 6: haal commentaar weg
+    /* TODO stap 6: haal commentaar weg
     public static void stap6(ArrayList<Vuurwerk> pakket) {
         System.out.println("\n--- STAP 6 ---");
 

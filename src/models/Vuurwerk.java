@@ -11,7 +11,7 @@ package models;
  */
 public class Vuurwerk extends Product {
 
-    private Instructie instructie;
+    Instructie instructie;
 
     public Vuurwerk(String naam, double prijs, Instructie instructie) {
         super(naam, prijs);
@@ -24,6 +24,10 @@ public class Vuurwerk extends Product {
         } else {
             return false;
         }
+    }
+    
+    public Instructie getInstructie() {
+        return instructie;
     }
   
 
