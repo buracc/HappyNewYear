@@ -10,23 +10,38 @@ package models;
  * @author burak
  */
 public class Vuurwerk extends Product {
-    
-    private Instructie instructie;  
-    
+
+    private Instructie instructie;
+
     public Vuurwerk(String naam, double prijs, Instructie instructie) {
         super(naam, prijs);
         this.instructie = instructie;
     }
-    
+
     public boolean isLegaal() {
-        if () {
-            
+        if (instructie != null) {
+            return instructie.isNederlandstalig();
+        } else {
+            return false;
         }
-        return true;
     }
-    
+  
+
     public String toString() {
-        return "";
+        if (instructie == null) {
+            
+        return super.toString()
+             + "\n  Instructie: Ontbreekt" 
+             + "\n  Legaal: " + isLegaal();
+        
+        } else {
+
+        return super.toString()
+             + "\n  Instructie: " + instructie
+             + "\n  Legaal: " + isLegaal();
+
+        }
+
     }
     
 }

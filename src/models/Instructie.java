@@ -38,6 +38,6 @@ public class Instructie {
      */
     @Override
     public String toString() {
-        return "Nederlandstalig=" + nederlandstalig + ", leeftijd=" + leeftijd + ", omschrijving=" + omschrijving;
-    }
+            return "Nederlandstalig=" + nederlandstalig + ", leeftijd=" + leeftijd + ", omschrijving=" + omschrijving;
+        }
 }

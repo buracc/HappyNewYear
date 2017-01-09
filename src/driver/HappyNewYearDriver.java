@@ -1,20 +1,21 @@
 package driver;
 
+import java.util.ArrayList;
+import models.Instructie;
+import models.Vuurwerk;
+
 public class HappyNewYearDriver {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-/* TODO stap 1: haal commentaar weg
         ArrayList<Vuurwerk> pakket = new ArrayList<Vuurwerk>();
-einde TODO stap 1 */
 
         System.out.println("Happy new year from: Burak, IS109, 500740123");
 
-/* TODO stap 1: haal commentaar weg
         stap1(pakket);
-einde TODO stap 1 */
+
 
 /* TODO stap 2: haal commentaar weg
         stap2(pakket);
@@ -37,30 +38,25 @@ einde TODO stap 5 */
 einde TODO stap61 */
     }
 
-/* TODO stap 1: haal commentaar weg
     private static void stap1(ArrayList<Vuurwerk> pakket) {
         System.out.println("\n--- STAP 1 ---");
 
         Vuurwerk vuurwerk;
 
-        // vuurwerk met Nederlandstalige instructie
         vuurwerk = new Vuurwerk("Veiligheidsbril", 2.5,
                 new Instructie(true, 6, "Draag bij aansteken"));
         pakket.add(vuurwerk);
         System.out.println(vuurwerk);
 
-        // vuurwerk met Engelstalige instructie
         vuurwerk = new Vuurwerk("Safety glass", 2.5,
                 new Instructie(false, 6, "Wear before ignition"));
         pakket.add(vuurwerk);
         System.out.println(vuurwerk);
 
-        // vuurwerk zonder instructie
         vuurwerk = new Vuurwerk("Aansteeklont zonder instructie", 0.25, null);
         pakket.add(vuurwerk);
         System.out.println(vuurwerk);
     }
-einde TODO stap 1 */
 
 /* TODO stap 2: haal commentaar weg
     private static void stap2(ArrayList<Vuurwerk> pakket) {
