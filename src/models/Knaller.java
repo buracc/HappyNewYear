@@ -15,7 +15,7 @@ public class Knaller extends Vuurwerk {
     private int decibel;
     
     public Knaller(int aantalKnallen , int decibel, String naam, double prijs, Instructie instructie) {
-        super(naam, prijs, instructie);
+        super(naam, prijs, instructie); //neem de variabelen mee van superklasse Vuurwerk
         this.aantalKnallen = aantalKnallen;
         this.decibel = decibel;
     }

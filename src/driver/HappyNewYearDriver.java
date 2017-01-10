@@ -110,23 +110,23 @@ public class HappyNewYearDriver {
 
     private static void toonVuurwerk(ArrayList<Vuurwerk> pakket) {
         double totaalPrijs = 0;
-        for (Vuurwerk i : pakket) {
-            totaalPrijs += i.getPrijs();
-            System.out.println(i.toString());
+        for (Vuurwerk i : pakket) { //loop door de array Vuurwerk
+            totaalPrijs += i.getPrijs(); //totaalPrijs telt op i aantal keren met getPrijs
+            System.out.println(i.toString()); //print al het vuurwerk
         }
-        System.out.println("\n  Kosten vuurwerkpakket: " + EURO + totaalPrijs);
+        System.out.println("\n  Kosten vuurwerkpakket: " + EURO + totaalPrijs); //print totaalprijs
     }
 
     private static void toonInstructies(ArrayList<Vuurwerk> pakket, int index) {
-        if ((index >= 0) && (index < pakket.size())) {
-            if (pakket.get(index).getInstructie() != null) {
-                System.out.println(pakket.get(index).getInstructie());
+        if ((index >= 0) && (index < pakket.size())) { //als index binnen bereik is doe:
+            if (pakket.get(index).getInstructie() != null) { //als getInstructie() uit array niet null is:
+                System.out.println(pakket.get(index).getInstructie()); //print de instructie voor opgegeven index
             } else {
-                System.out.println("Instructie ontbreekt.");
+                System.out.println("Instructie ontbreekt."); //als deze null is, print instructie ontbreekt
             }
 
         } else {
-            System.out.println("Index valt buiten grenzen.");
+            System.out.println("Index valt buiten grenzen."); //als index buiten bereik is, print
         }
     }
 
@@ -145,10 +145,10 @@ public class HappyNewYearDriver {
     }
 
     private static void printHardeKnallers(ArrayList<Vuurwerk> pakket, int maxDecibel) {
-        for (Vuurwerk i : pakket) {
-            if (i instanceof Knaller) {
-                if (((Knaller) i).getDecibel() > maxDecibel) {
-                    System.out.println(i.toString());
+        for (Vuurwerk i : pakket) { //loop door de array
+            if (i instanceof Knaller) { //gebruik instanceof om methodes van de subclass te kunnen gebruiken
+                if (((Knaller) i).getDecibel() > maxDecibel) { //als getDecibel() groter is dan opgegeven maxDecibel
+                    System.out.println(i.toString()); //print de toString van i (index)
                 }
             }
         }

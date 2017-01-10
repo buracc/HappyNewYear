@@ -23,7 +23,7 @@ public abstract class Product {
         this.prijs = prijs;
     }
     
-    public abstract boolean isLegaal();
+    public abstract boolean isLegaal(); //abstracte methode isLegaal()
 
     public String getNaam() {
         return naam;
