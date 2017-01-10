@@ -22,10 +22,7 @@ public class HappyNewYearDriver {
         stap3(pakket);
         stap4(pakket);
         stap5(pakket);
-
-        /* TODO stap 6: haal commentaar weg
         stap6(pakket);
-einde TODO stap61 */
     }
 
     private static void stap1(ArrayList<Vuurwerk> pakket) {
@@ -141,11 +138,19 @@ einde TODO stap61 */
         toonInstructies(pakket, 11);
     }
 
-    /* TODO stap 6: haal commentaar weg
     public static void stap6(ArrayList<Vuurwerk> pakket) {
         System.out.println("\n--- STAP 6 ---");
 
         printHardeKnallers(pakket, 100);
     }
-einde TODO stap 6 */
+
+    private static void printHardeKnallers(ArrayList<Vuurwerk> pakket, int maxDecibel) {
+        for (Vuurwerk i : pakket) {
+            if (i instanceof Knaller) {
+                if (((Knaller) i).getDecibel() > maxDecibel) {
+                    System.out.println(i.toString());
+                }
+            }
+        }
+    }
 }
